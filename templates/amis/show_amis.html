@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Visualiser son groupe d'ami</title>
+{% endblock %}
+
+{% block body %}
+<div class="contenu_page">
+    <h3>Amis</h3>
+    <a href="/amis/add"><button type="button" class="btn btn-outline-secondary">Ajouter un ami</button></a>
+    <br><br>
+    <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nom du club</th><th>Ville du club</th><th>Identifiant du Club</th><th>Image</th><th>Nombre de joueurs</th><th>Opération</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if clubsFoot | length >= 1 %}
+                {% for ligne in clubsFoot %}
+                   <tr>
+                          <td>{{ ligne.nomClub }}</td>
+                          <td>{{ ligne.villeClub }}</td>
+                          <td>{{ ligne.id }}</td>
+                           <td>
+                              {%  if ligne.image is not none and ligne.image != "" %}
+                                    <img style="width:40px;height:40px"  src="{{ url_for('static', filename = 'images/' + ligne['image']) }}"  alt="image  de {{ ligne.nom }}" >
+                              {% else %}
+                                    <img style="width:40px;height:40px"   src="{{ url_for('static', filename='images/no_photo.jpeg')}}"  alt="no image" >
+                              {% endif %}
+                          </td>
+                          <td class="info_en_rouge">{{ ligne.nb_joueurs }}</td>
+                          <td>
+                              <a href="/club-foot/edit?id={{ ligne.id }}"><button type="button" class="btn btn-warning">Editer</button></a>&nbsp;
+                              <a href="/club-foot/delete?id={{ ligne.id }}" ><button type="button" class="btn btn-danger">Supprimer</button></a>
+                          </td>
+                   </tr>
+                {% endfor %}
+            {% else %}
+                    <tr>
+                          <td>
+                                Entrez des amis dans la base de données."
+                          </td>
+                   </tr>
+            {% endif %}
+            </tbody>
+    </table>
+
+
+
+</div>
+{% endblock %}
