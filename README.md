@@ -26,43 +26,12 @@ Une fois les données enregistrées, celles-ci sont exploitées pour :
 - Mieux comprendre la structure globale du réseau.
 
 ---
-### Compétences mobilisées
+### Connaissance des graphes mobilisées 
 
-**Modélisation de base de données :**
 
-- Conception d’un schéma relationnel
-- Gestion des relations plusieurs-à-plusieurs
-- Utilisation des clés primaires et étrangères
 
-**SQL / MySQL :**
-
-- Création et gestion de tables
-- Requêtes complexes (jointures, agrégations)
-- Exploitation des données pour l’analyse
-
-**Python :**
-
-- Manipulation de données issues d’une base SQL
-- Utilisation de bibliothèques scientifiques
-- Modélisation et analyse de graphes
-
-**Framework Flask :**
-
-- Création d’une application web
-- Mise en place d’un système CRUD
-- Interaction entre le backend Python et la base de données
-
-**Algorithmique et graphes :**
-
-- Représentation d’un réseau social
-- Calcul de métriques (degré, moyenne, maximum)
-- Visualisation de graphes
 
 ---
 
-### Objectif du projet
-
-L’objectif principal de Social-Link est de concrétiser des notions théoriques vues en informatique, en particulier les graphes, en les appliquant à un projet réel mêlant développement web et gestion de bases de données.
-
-Ce projet permet ainsi de faire le lien entre l’algorithmique, les bases de données et le développement web au sein d’une application cohérente et fonctionnelle.
+### 
 
